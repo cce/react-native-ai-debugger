@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "tsc && chmod 755 build/index.js && chmod 755 build/httpServerStandalone.js",
+    "prepare": "npm run build",
     "start": "node build/index.js",
     "dev": "nodemon --watch src --ext ts --exec 'npm run build && node build/index.js'",
     "http-server": "node build/httpServerStandalone.js"
